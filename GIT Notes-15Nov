@@ -1,0 +1,267 @@
+
+
+Demo 1:
+
+AWS --> 1 VM - EC2
+
+Demo 2:
+
+Switch to root user
+...
+sudo su -
+...
+
+Install git on the VM
+
+...
+yum install git -y
+...
+
+Demo 3:
+***************
+Configure git is a process in which we will set 2 variable
+
+which are:
+
+user.name
+user.email
+
+git config: this command is a very powerful command that help to manage your workflows easily on git
+
+using this command we will set initial git configuration that will latter be used in git logs
+
+The configuration are to be done only once
+These will application to every local repo that you will create on this VM
+
+Commands:
+
+     git config --global user.name SonalMittal
+     git config --global user.email sonal@edureka.com
+     git config --list
+
+*************************************
+
+Demo4:
+Creating new file and add ing the files to LR
+
+ git init
+ ls -al
+ git status
+ git add index1.html
+ git status
+ git commit -m "added file to LR"
+ git status
+ git add .
+ git status
+ git commit -m "added index2.html to LR"
+ git status
+
+Demo 5:
+****************
+Add the modifed changes to Local repo:
+
+Take an Exisitng file which is already tracked by GIT
+
+Make chnages to it and add the modification to the LR
+
+Method 1:
+********
+git ls-files
+
+vim index2.html
+press i
+enter the text
+press ESC key
+enter :wq!
+press enter key
+
+git commit -a -m "added all modifcation to LR"
+
+Method2:
+********
+git add index1.html
+ git commit -m "modifications index1.html to LR"
+
+
+Demo 6: 
+*****************
+To see the commit history on git
+
+git log
+
+git log --oneline
+
+
+Assignment:
+
+Save the git log in a file
+
+Demo 7:
+******************
+
+Show us the changes in the file that are new and the changes that have been commited
+
+git diff index1.html
+
+All the chnages that are not commited needs to be discarded
+
+My changes are in WD
+
+git restore index1.html ==> to discard changes in working directory
+
+OR
+
+git checkout -- index1.html
+
+Show us the changes in the file that are staged
+
+git diff --staged
+
+All the chnages that are not commited needs to be moved back to WD (red color)
+
+"git restore --staged <file>..." to unstage
+
+
+See what chnages were commited
+
+git show commtid
+
+We want to revert the file back to its previous state
+
+Revert command in git:
+***************
+
+Revert command works on a single commit
+What ever chnages happend in the commit will be back to previous state
+Also when you revert because the file state changes --> a commit id will be automatically generated
+Revert message shoudl also be added
+
+As the revert command on a commit is executed
+An editor will open ==> message
+==> save it 
+
+git revert <commit id>
+
+Delete a file in git repository and WD
+*******************************************
+
+git rm index1.html
+
+git commit -m "deleted file"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
